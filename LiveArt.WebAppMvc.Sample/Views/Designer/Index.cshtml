@@ -1,0 +1,9 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "LiveArtJS Designer";
+    var designId = Request["design_id"];
+}
+<h4>@ViewBag.Message</h4>
+
+<iframe src="@Url.Action("IFrameIndex",new {design_id=designId})" height="800px" width="100%" frameborder="0"></iframe>

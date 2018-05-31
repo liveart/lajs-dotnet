@@ -1,0 +1,66 @@
+﻿{
+    "locations": [
+        {
+            "colors": "processColors",
+            "designedArea": 37788.103168620029,
+            "designedAreaRect": 62475.491536414069,
+            "images": 2,
+            "letterings": 1,
+            "name": "Front",
+            "objectCount": 3,
+            "objects": [
+                {
+                    "colors": 1,
+                    "colorsList": [
+                        "#F0E0D0"
+                    ],
+                    "designedArea": 6342,
+                    "type": "txt"
+                },
+                {
+                    "colors": 3,
+                    "designedArea": 23208.783168620044,
+                    "type": "svg"
+                },
+                {
+                    "colors": "processColors",
+                    "designedArea": 8237.319999999987,
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "colors": 0,
+            "colorsList": [],
+            "designedArea": 0,
+            "designedAreaRect": 0,
+            "images": 0,
+            "letterings": 0,
+            "name": "Back",
+            "objectCount": 0,
+            "objects": []
+        }
+    ],
+    "namesNumbers": [],
+    "product": {
+        "color": "#FFF",
+        "colorName": "White",
+        "id": "11"
+    },
+    "quantities": [
+        {
+            "quantity": 250,
+            "size": {
+                "charge": "1",
+                "id": "1",
+                "name": "XS",
+                "quantities": [
+                    250,
+                    500,
+                    2500,
+                    5000
+                ]
+            }
+        }
+    ]
+}

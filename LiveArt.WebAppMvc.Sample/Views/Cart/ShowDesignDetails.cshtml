@@ -1,0 +1,83 @@
+﻿@using LiveArt.Data.Json.Design
+@model LiveArt.WebAppMvc.Sample.Models.DesignDetailsViewModel
+@{
+    ViewBag.Title = $"Cart: Order Details for '{Model.DesignId}' design";
+    
+}
+
+<h2>@ViewBag.Title</h2>
+<h2><a href="@Model.ZipFileUrl">Download as .zip</a></h2>
+<h3>@ViewBag.Message</h3>
+
+
+<style>
+    .priceRow {
+        
+    }
+
+     .totalPriceRow {
+         font-weight: bold;
+     }
+
+    .locations {
+        margin-top: 20px;
+    }
+
+    .locationPreview {
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+
+
+<div id="designDetails">
+
+    <div class="Product">
+        @{var product = Model.Product;}
+        <div>
+            <label>Product name: </label>
+            @product.Name
+             @if (product.HasColor)
+            {<text>
+                 &nbsp; (<span>@product.Color.Name</span>)
+
+             </text>}
+       </div>
+
+    </div>
+
+    <div class="locations row">
+        @foreach (var location in Model.Locations){
+            <div class="location col-md-6">
+                <div>
+                    <b>Location <span>@location.Name</span></b>
+                </div>
+                <div>
+                    <object class="locationPreview" type="image/svg+xml" data="@location.SvgPreviewUrl"></object>
+                    <a href="@location.SvgPreviewDownloadUrl">Download <span>@location.Name</span></a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="Prices">
+        <h2>Prices</h2>
+        @foreach (var priceRow in Model.Prices)
+        {
+
+            <div class="@(priceRow.IsTotal ? "totalPriceRow" : "priceRow")">
+                <label>@priceRow.Label</label>&nbsp;:
+                <span>@priceRow.Value</span>
+            </div>
+
+        }
+
+
+    </div>
+
+    <div>
+        @Html.ActionLink("Pack Design to .Zip", "PackDesign",new {id = Model.DesignId })
+    </div>
+
+</div>

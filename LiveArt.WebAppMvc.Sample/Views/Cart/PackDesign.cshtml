@@ -1,0 +1,85 @@
+﻿@model LiveArt.Design.PostProcessing.Packer.DesignPack
+
+@{
+    ViewBag.Title = string.Format(".Zip of {0} design", ViewBag.DesignId);
+
+
+}
+
+
+<div>
+    <h4>@ViewBag.Title</h4>
+    @if (ViewBag.ShowLog)
+    {
+        <text> ( @Html.ActionLink("Hide Log", null,new {id = ViewBag.DesignId }) ) </text>
+    }
+    else
+    {
+        <text> ( @Html.ActionLink("Show Log", null, new { id = ViewBag.DesignId ,showLog = true }) )</text>
+    }
+    <hr />
+
+    @if (Model.ZipFile != null)
+    {
+        <div>
+            <a href="@Model.ZipFile.Url">download @Model.ZipFile.FileName</a>
+        </div>
+    }
+
+    @foreach (var location in Model.Locations)
+    {
+        <h5>@location.Name</h5>
+        <div>
+            <label> Svg Preview:</label><object type="image/svg+xml" data="@location.SvgFiles.First().Url"></object>
+        </div>
+        if (location.PngPreview != null)
+        {
+            <div>
+                <label>.Png Preview:</label><img src="@location.PngPreview.Url"/>
+            </div>
+        }
+        else
+        {
+            <div>
+                Png preview not generated, please configure web.config/appSettings/Inkscape.exe path
+            </div>
+        }
+
+        foreach (var svg in location.SvgFiles)
+        {
+            <text>
+                <a href="@svg.Url" target="_blank">@svg.FileName</a>
+                &nbsp;
+            </text>
+        }
+
+        if (location.Pdf != null)
+        {
+            <text>
+            <a href="@location.Pdf.Url" target="_blank">@location.Pdf.FileName</a>
+              &nbsp;
+            </text>
+    }
+
+}
+</div>
+<p>
+
+    @Html.ActionLink("Back to Design Details", "ShowDesignDetails", new {designId = ViewBag.DesignId})
+</p>
+
+@if (ViewBag.ShowLog)
+{
+    <div>
+        <h5>Log:</h5>
+        <ul>
+            @foreach (var logLine in Model.LogLines)
+            {
+                <li>[@logLine.Time] @logLine.Message</li>
+            }
+        </ul>
+
+    </div>
+}
+
+

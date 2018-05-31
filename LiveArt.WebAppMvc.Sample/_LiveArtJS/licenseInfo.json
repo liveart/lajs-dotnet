@@ -1,0 +1,10 @@
+{
+  "product":"LiveArt",
+  "version":"0.10.24",
+  "owner":"trial",
+  "domains": [ "*" ],
+  "source":{
+  	"sha":""
+  }
+
+}

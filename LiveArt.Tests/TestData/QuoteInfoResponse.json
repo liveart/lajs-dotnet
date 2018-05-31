@@ -1,0 +1,21 @@
+﻿{
+    "prices": [
+        {
+            "label": "Item Price",
+            "price": "$20"
+        },
+        {
+            "label": "Decoration",
+            "price": "$0"
+        },
+        {
+            "label": "Discount 0.25%",
+            "price": "-$0.05"
+        },
+        {
+            "isTotal": true,
+            "label": "Total",
+            "price": "$19.95"
+        }
+    ]
+}

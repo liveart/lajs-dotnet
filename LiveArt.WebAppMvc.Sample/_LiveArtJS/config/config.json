@@ -1,0 +1,55 @@
+{
+  "productsList": {
+    "url": "../_LiveArtJS/config/products.json"
+  },
+  "defaultProductId": "11",
+  "fonts": {
+    "url": "../_LiveArtJS/config/fonts.json"
+  },
+  "colors": {
+    "url": "../_LiveArtJS/config/colors.json",
+    "pantones_url": "../_LiveArtJS/config/pantones.json"
+  },
+  "graphicsList": {
+    "url": "../_LiveArtJS/config/graphics.json"
+  },
+  "social": {
+    "url": "../_LiveArtJS/config/social.json"
+  },
+  "options": {
+    "deleteOnDoubleClick": false,
+    "includeProductInDesign": true,
+    "includePrintingAreaInDesign": true,
+    "includeMaskInDesign": true,
+    "fontsCSSUrl": "../_LiveArtJS/fonts/fonts.css",
+    "zoomEnabled": true,
+    "minZoom": 50,
+    "maxZoom": 150,
+    "checkeredBackground": true,
+    "unit": "in",
+    "unit2": "ft",
+    "unitConversionMult": 12,
+    "showProductSelector": true,
+    "checkTextFXThrottle": 400,
+    "minDPU": 45,
+    "showUploadedColorsDialog": true,
+    "fitProductImage": false,
+    "enableSnapGuides": true
+  },
+  "textEffects": {
+    "config": "../_LiveArtJS/config/textEffects.json",
+    "url_deprecated": "http://hive.liveartdesigner.com/mmjs/services/getTextZv4.php"
+  },
+  "defaultNameObjectText": "NAMES HERE",
+  "defaultNumberObjectText": "00",
+  "assetsUrl": "../_LiveArtJS/assets/",
+  "galleryBaseUrl": "",
+  "getQuoteUrl": "../la-api/Quote/Calculate",
+  "getDesignsUrl": "../la-api/Design/List?email=${email}",
+  "saveDesignUrl": "../la-api/Design/Save",
+  "loadDesignUrl": "../la-api/Design/Get/${design_id}",
+  "redirectUrl": "../Cart/ShowDesignDetails?designId=${design_id}",
+  "uploadImageUrl": "../la-api/Upload/Image",
+  "shareLinkUrl": "/Designer?design_id=${design_id}",
+  "redirectWindow": "parent"
+}

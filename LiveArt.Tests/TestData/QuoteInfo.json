@@ -1,0 +1,95 @@
+﻿{
+    "colors": "processColors",
+    "colorsList": "processColors",
+    "locations": [
+        {
+            "colors": "processColors",
+            "colorsList": [
+                "#F0E0D0"
+            ],
+            "designedArea": 7.2625806264285595,
+            "designedAreaRect": 14.53293808222984,
+            "designedHeight": 3.7529685135723656,
+            "designedWidth": 3.7331249999999998,
+            "images": 2,
+            "letterings": 1,
+            "name": "Front",
+            "objectCount": 3,
+            "objects": [
+                {
+                    "colors": 1,
+                    "colorsList": [
+                        "#F0E0D0"
+                    ],
+                    "designedArea": 2.6878500000000001,
+                    "text": "Add some text",
+                    "type": "txt"
+                },
+                {
+                    "colors": "processColors",
+                    "designedArea": 2.3861111761263869,
+                    "id": "11",
+                    "type": "image"
+                },
+                {
+                    "colors": 1,
+                    "colorsList": [
+                        "#000000"
+                    ],
+                    "designedArea": 2.1886194503021721,
+                    "id": "21",
+                    "type": "svg"
+                }
+            ]
+        },
+        {
+			"colors": 2,
+            "colorsList": [
+                "#000000",
+				"#FFFFFF"
+            ],
+            "designedArea": 0,
+            "designedAreaRect": 2.1886194503021721,
+            "images": 1,
+            "letterings": 0,
+            "name": "Back",
+            "objectCount": 1,
+            "objects": [
+			  {
+                    "colors": 2,
+                    "colorsList": [
+                        "#000000",
+						"#FFFFFF"
+                    ],
+                    "designedArea": 2.1886194503021721,
+                    "id": "21",
+                    "type": "svg"
+                }
+			]
+        }
+    ],
+    "namesNumbers": [],
+    "product": {
+        "color": "#FFFFFF",
+        "colorName": "White",
+        "id": "11",
+        "productColors": [
+            {
+                "id": ".bg.fill",
+                "name": "White",
+                "value": "#FFFFFF"
+            }
+        ]
+    },
+    "quantities": [
+        {
+            "quantity": 1,
+            "size": "XS"
+        },
+		 {
+            "quantity": 2,
+            "size": "XLL"
+        }
+
+    ]
+}

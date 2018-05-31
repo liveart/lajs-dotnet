@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCFE2314-9D40-45E9-AB7A-A5123D3E367E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveArt.WebAppMvc.Sample</RootNamespace>
+    <AssemblyName>LiveArt.WebAppMvc.Sample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\DesignerController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CartModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="_LiveArtJS\assets\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="_LiveArtJS\assets\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="_LiveArtJS\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="_LiveArtJS\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="_LiveArtJS\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="_LiveArtJS\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="_LiveArtJS\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="_LiveArtJS\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="_LiveArtJS\assets\css\colorPicker.css" />
+    <Content Include="_LiveArtJS\assets\css\farbtastic.css" />
+    <Content Include="_LiveArtJS\assets\css\jquery.nouislider.css" />
+    <Content Include="_LiveArtJS\assets\css\jquery.nouislider.min.css" />
+    <Content Include="_LiveArtJS\assets\css\style-responsive.css" />
+    <Content Include="_LiveArtJS\assets\css\style.css" />
+    <Content Include="_LiveArtJS\assets\css\tooltipster-noir.css" />
+    <Content Include="_LiveArtJS\assets\css\tooltipster.css" />
+    <Content Include="_LiveArtJS\assets\img\add-image-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\add-name-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\add-num-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\add-text-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\align-center-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\align-left-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\align-right-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\back-icon-white.png" />
+    <Content Include="_LiveArtJS\assets\img\bg-fill.png" />
+    <Content Include="_LiveArtJS\assets\img\check-icon-white-border.png" />
+    <Content Include="_LiveArtJS\assets\img\check-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\clear-design-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\close-expanded-window-icon-white.png" />
+    <Content Include="_LiveArtJS\assets\img\close-window-icon-white.png" />
+    <Content Include="_LiveArtJS\assets\img\farbtastic\marker.png" />
+    <Content Include="_LiveArtJS\assets\img\farbtastic\mask.png" />
+    <Content Include="_LiveArtJS\assets\img\farbtastic\wheel.png" />
+    <Content Include="_LiveArtJS\assets\img\fb-logo.png" />
+    <Content Include="_LiveArtJS\assets\img\flikr-logo.png" />
+    <Content Include="_LiveArtJS\assets\img\glyphicons-lock.png" />
+    <Content Include="_LiveArtJS\assets\img\google-logo.png" />
+    <Content Include="_LiveArtJS\assets\img\horizontal-flip-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\insta-logo.png" />
+    <Content Include="_LiveArtJS\assets\img\LA-logo.svg" />
+    <Content Include="_LiveArtJS\assets\img\names-numbers-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\overlap-backward-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\overlap-toward-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\proceed-quote-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\product-color-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\redo-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\select-product-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\share-design-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\text-align-center-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\text-align-left-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\text-align-right-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\text-icon-white.png" />
+    <Content Include="_LiveArtJS\assets\img\tools-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\tracker\delete.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\delete_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\image_preloader.gif" />
+    <Content Include="_LiveArtJS\assets\img\tracker\image_preloader.svg" />
+    <Content Include="_LiveArtJS\assets\img\tracker\lock.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\lock_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\move.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\move_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resize.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resizeH.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resizeH_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resizeV.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resizeV_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\resize_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\rotate.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\rotate_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\unlock.png" />
+    <Content Include="_LiveArtJS\assets\img\tracker\unlock_32px.png" />
+    <Content Include="_LiveArtJS\assets\img\transparent-cross-icon.png" />
+    <Content Include="_LiveArtJS\assets\img\undo-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\upload-artwork-icon.svg" />
+    <Content Include="_LiveArtJS\assets\img\vertical-flip-icon.png" />
+    <Content Include="_LiveArtJS\assets\js\farbtastic.js" />
+    <Content Include="_LiveArtJS\assets\js\hello.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.colorPicker.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.fileupload.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.iframe-transport.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.nouislider.min.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.PrintArea.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.tooltipster.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.tooltipster.min.js" />
+    <Content Include="_LiveArtJS\assets\js\jquery.ui.widget.js" />
+    <Content Include="_LiveArtJS\assets\js\liveart-ui-components.js" />
+    <Content Include="_LiveArtJS\assets\js\svg-injector.min.js" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man.font.js" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Iconian Fonts License.txt" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Arial\Arial.font.js" />
+    <Content Include="_LiveArtJS\fonts\Arial\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\Bebas_Neue.font.js" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\License.txt" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Berliner\Berliner.font.js" />
+    <Content Include="_LiveArtJS\fonts\Berliner\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Bernier\Bernier.font.js" />
+    <Content Include="_LiveArtJS\fonts\Bernier\Freeware_License-BERNIER.txt" />
+    <Content Include="_LiveArtJS\fonts\Bernier\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Black-Willow\Black_Willow.font.js" />
+    <Content Include="_LiveArtJS\fonts\Black-Willow\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Blackout\Blackout-Two-AM.font.js" />
+    <Content Include="_LiveArtJS\fonts\Blackout\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\Capture_It.font.js" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\Cpr.Sparhelt font License.txt" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Carnevalee-Freakshow\Carnevalee-Freakshow.font.js" />
+    <Content Include="_LiveArtJS\fonts\Carnevalee-Freakshow\README.txt" />
+    <Content Include="_LiveArtJS\fonts\Carnevalee-Freakshow\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Champagne\Champagne.font.js" />
+    <Content Include="_LiveArtJS\fonts\Champagne\Freeware License.txt" />
+    <Content Include="_LiveArtJS\fonts\Champagne\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Chunk\Chunk.font.js" />
+    <Content Include="_LiveArtJS\fonts\Chunk\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\College\College.font.js" />
+    <Content Include="_LiveArtJS\fonts\College\Matthew Welch License - College.txt" />
+    <Content Include="_LiveArtJS\fonts\College\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Compass\Compass.font.js" />
+    <Content Include="_LiveArtJS\fonts\Compass\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Deftone\Deftone.font.js" />
+    <Content Include="_LiveArtJS\fonts\Deftone\Larabie Fonts License.txt" />
+    <Content Include="_LiveArtJS\fonts\Deftone\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Desyrel\Apostrophic Labs License.txt" />
+    <Content Include="_LiveArtJS\fonts\Desyrel\Desyrel.font.js" />
+    <Content Include="_LiveArtJS\fonts\Desyrel\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Deutsch-Gothic\Deutsch_Gothic.font.js" />
+    <Content Include="_LiveArtJS\fonts\Deutsch-Gothic\James Fordyce Font License.txt" />
+    <Content Include="_LiveArtJS\fonts\Deutsch-Gothic\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Dinner-Skinny\Dinner_Skinny.font.js" />
+    <Content Include="_LiveArtJS\fonts\Dinner-Skinny\Freeware License.txt" />
+    <Content Include="_LiveArtJS\fonts\Dinner-Skinny\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Dirty-Ego\Dirty_Ego.font.js" />
+    <Content Include="_LiveArtJS\fonts\Dirty-Ego\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\District\Cpr.Sparhelt font License.txt" />
+    <Content Include="_LiveArtJS\fonts\District\District.font.js" />
+    <Content Include="_LiveArtJS\fonts\District\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Dited\Dited.font.js" />
+    <Content Include="_LiveArtJS\fonts\Dited\Jovanny Lemonad Freeware License.txt" />
+    <Content Include="_LiveArtJS\fonts\Dited\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Dozen\Dozen.font.js" />
+    <Content Include="_LiveArtJS\fonts\Dozen\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Dusty-Chalk\Dusty_Chalk.font.js" />
+    <Content Include="_LiveArtJS\fonts\Dusty-Chalk\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Eraser\Eraser.font.js" />
+    <Content Include="_LiveArtJS\fonts\Eraser\Freeware License.txt" />
+    <Content Include="_LiveArtJS\fonts\Eraser\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Exan\Exan.font.js" />
+    <Content Include="_LiveArtJS\fonts\Exan\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Existence-Unicase\Existence.font.js" />
+    <Content Include="_LiveArtJS\fonts\Existence-Unicase\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Existence-Unicase\Yeah Noah License.txt" />
+    <Content Include="_LiveArtJS\fonts\Firecat\Firecat.font.js" />
+    <Content Include="_LiveArtJS\fonts\Firecat\Freeware License.txt" />
+    <Content Include="_LiveArtJS\fonts\Firecat\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\fonts.css" />
+    <Content Include="_LiveArtJS\fonts\Foxhole\Foxhole.font.js" />
+    <Content Include="_LiveArtJS\fonts\Foxhole\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Giant-Head\Blue Vinyl License.txt" />
+    <Content Include="_LiveArtJS\fonts\Giant-Head\Giant_Head.font.js" />
+    <Content Include="_LiveArtJS\fonts\Giant-Head\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Glamor\1001fonts-glamor-eula.txt" />
+    <Content Include="_LiveArtJS\fonts\Glamor\Glamor.font.js" />
+    <Content Include="_LiveArtJS\fonts\Glamor\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Growl\Growl.font.js" />
+    <Content Include="_LiveArtJS\fonts\Growl\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Helltown\Helltown.font.js" />
+    <Content Include="_LiveArtJS\fonts\Helltown\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Kingthings-Printing\Kingthings License.txt" />
+    <Content Include="_LiveArtJS\fonts\Kingthings-Printing\Kingthings_Printing.font.js" />
+    <Content Include="_LiveArtJS\fonts\Kingthings-Printing\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Komika-Title\Komika_Title.font.js" />
+    <Content Include="_LiveArtJS\fonts\Komika-Title\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\LeagueGothic.font.js" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-italic-webfont.svg" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-regular-webfont.svg" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-italic-webfont.svg" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-regular-webfont.svg" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Learning-Curve\Blue Vinyl License.txt" />
+    <Content Include="_LiveArtJS\fonts\Learning-Curve\Learning_Curve.font.js" />
+    <Content Include="_LiveArtJS\fonts\Learning-Curve\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Luna\Luna.font.js" />
+    <Content Include="_LiveArtJS\fonts\Luna\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Melma\1001fonts-melma-eula.txt" />
+    <Content Include="_LiveArtJS\fonts\Melma\Melma.font.js" />
+    <Content Include="_LiveArtJS\fonts\Melma\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Mosk\Mosk.font.js" />
+    <Content Include="_LiveArtJS\fonts\Mosk\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\My-Underwood\My_Underwood.font.js" />
+    <Content Include="_LiveArtJS\fonts\My-Underwood\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\My-Underwood\Tension Type Font License.txt" />
+    <Content Include="_LiveArtJS\fonts\Nickainley\Nickainley.font.js" />
+    <Content Include="_LiveArtJS\fonts\Nickainley\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Nordic\Nordic.font.js" />
+    <Content Include="_LiveArtJS\fonts\Nordic\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Orbitron\Orbitron.font.js" />
+    <Content Include="_LiveArtJS\fonts\Orbitron\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Quirko\Quirko.font.js" />
+    <Content Include="_LiveArtJS\fonts\Quirko\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Reckless\Reckless.font.js" />
+    <Content Include="_LiveArtJS\fonts\Reckless\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Reckoner\Reckoner.font.js" />
+    <Content Include="_LiveArtJS\fonts\Reckoner\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Royals\Royals.font.js" />
+    <Content Include="_LiveArtJS\fonts\Royals\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Seaside-Resort\Nick%27s Fonts License.txt" />
+    <Content Include="_LiveArtJS\fonts\Seaside-Resort\Seaside_Resort.font.js" />
+    <Content Include="_LiveArtJS\fonts\Seaside-Resort\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\SF-Collegiate\SF_Collegiate.font.js" />
+    <Content Include="_LiveArtJS\fonts\SF-Collegiate\ShyFonts Font License.txt" />
+    <Content Include="_LiveArtJS\fonts\SF-Collegiate\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\Apache License.txt" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\Sinkin_Sans.font.js" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Snickles\Snickles.font.js" />
+    <Content Include="_LiveArtJS\fonts\Snickles\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Snickles\Tup Wanders Font License.txt" />
+    <Content Include="_LiveArtJS\fonts\Spin-Cycle\Blue Vinyl License.txt" />
+    <Content Include="_LiveArtJS\fonts\Spin-Cycle\Spin_Cycle.font.js" />
+    <Content Include="_LiveArtJS\fonts\Spin-Cycle\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Sweet-Sorrow\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Sweet-Sorrow\Sweet_Sorrow.font.js" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu.font.js" />
+    <Content Include="_LiveArtJS\fonts\WC-Rhesus\Creative Commons Attribution-No Derivative Works.txt" />
+    <Content Include="_LiveArtJS\fonts\WC-Rhesus\stylesheet.css" />
+    <Content Include="_LiveArtJS\fonts\WC-Rhesus\WC_Rhesus.font.js" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\aimophila-ruficeps.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\brittany_spaniel.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\butterfly.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\crab.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\lion.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\lizard.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\orca.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\pinguin.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\thunnus.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\toucan.png" />
+    <Content Include="_LiveArtJS\gallery\animals\PNG\zebra.png" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\aimophila-ruficeps.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\brittany_spaniel.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\butterfly.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\crab.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\lion.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\lizard.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\orca.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\pinguin.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\thunnus.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\toucan.svg" />
+    <Content Include="_LiveArtJS\gallery\animals\SVG\zebra.svg" />
+    <Content Include="_LiveArtJS\gallery\flag\Ireland.svg" />
+    <Content Include="_LiveArtJS\gallery\flag\st-George-cross.svg" />
+    <Content Include="_LiveArtJS\gallery\flag\thumbs\Ireland.png" />
+    <Content Include="_LiveArtJS\gallery\flag\thumbs\st-George-cross.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\bear.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\butterfly.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\cat.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\dog.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\duck.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\elephant.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\monkey.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\mouse.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\pig.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\rabbit.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\animals\svg\skunk.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\next.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\previous.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\right.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\right1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\thin.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\arrows\svg\up.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\ascendant.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\bars.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\briefcase.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\business.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\calendar.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\increasing.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\line.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\pen.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\pen1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\pencil.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\pencil1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\pie.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\rising.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\business\svg\wristwatch.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\angry.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\bad.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\emoticon.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\emoticon1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\emoticons2.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\emoticons3.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\happy.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\happy1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\happy2.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\male.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\nerd.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\sad.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\sad1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\sleeping.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiley.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling2.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling3.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling4.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling5.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\smiling6.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\surprised.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\wink.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\emotions\svg\winking.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\24.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\24_1.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\air.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\airplane.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\call.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\commercial.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\delivery.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\delivery1.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\delivery2.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\delivery3.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\international.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\logistics.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\package.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\phone.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\placeholder.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\talking.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\telephone.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\triangular.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\png\verification.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\24.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\24_1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\air.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\airplane.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\call.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\commercial.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\delivery.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\delivery1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\delivery2.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\delivery3.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\international.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\logistics.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\package.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\phone.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\placeholder.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\talking.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\telephone.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\triangular.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\logistics\svg\verification.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\multicolor\png\butterfly.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\multicolor\png\lion.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\multicolor\svg\butterfly.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\multicolor\svg\lion.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\acoustic.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\bass.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\dj.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\microphone.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\musical.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\png\treble.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\acoustic.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\bass.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\dj.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\microphone.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\musical.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\music\svg\treble.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\barbell.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\basketball.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\finish.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\regular.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\runner.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\skiing.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\soccer.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\soccer1.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\png\swimming.png" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\barbell.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\basketball.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\finish.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\regular.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\runner.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\skiing.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\soccer.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\soccer1.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\sports\svg\swimming.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\bicycle.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\bus.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\car.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\motorcycle.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\sedan.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\semaphore.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\traffic.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\transport\svg\train.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\travel\svg\coconut.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\travel\svg\photo.svg" />
+    <Content Include="_LiveArtJS\gallery\Icons\travel\svg\plane.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\banknote.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\bubble.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\bulb.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\calendar.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\camera.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\clip.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\clock.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\cloud.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\cup.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\data.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\diamond.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\display.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\eye.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\fire.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\food.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\heart.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\key.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\lab.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\like.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\location.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\lock.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\mail.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\megaphone.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\music.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\news.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\note.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\paperplane.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\params.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\pen.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\phone.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\photo.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\search.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\settings.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\shop.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\sound.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\stack.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\star.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\study.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\t-shirt.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\tag.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\trash.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\truck.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\tv.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\user.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\vallet.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\video.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\vynil.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\PNG\world.png" />
+    <Content Include="_LiveArtJS\gallery\LineCons\readme.txt" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\banknote.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\bubble.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\bulb.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\calendar.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\camera.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\clip.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\clock.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\cloud.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\cup.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\data.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\diamond.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\display.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\eye.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\fire.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\food.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\heart.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\key.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\lab.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\like.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\location.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\lock.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\mail.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\megaphone.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\music.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\news.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\note.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\paperplane.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\params.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\pen.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\phone.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\photo.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\search.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\settings.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\shop.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\sound.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\stack.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\star.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\study.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\t-shirt.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\tag.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\trash.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\truck.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\tv.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\user.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\vallet.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\video.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\vynil.svg" />
+    <Content Include="_LiveArtJS\gallery\LineCons\SVG\world.svg" />
+    <Content Include="_LiveArtJS\gallery\raster\chinese_crab.jpg" />
+    <Content Include="_LiveArtJS\gallery\raster\crab.png" />
+    <Content Include="_LiveArtJS\gallery\raster\teapot.png" />
+    <Content Include="_LiveArtJS\gallery\raster\thumbs\chinese_crab.jpg" />
+    <Content Include="_LiveArtJS\gallery\raster\thumbs\crab.png" />
+    <Content Include="_LiveArtJS\gallery\raster\thumbs\teapot.png" />
+    <Content Include="_LiveArtJS\LA.config.js" />
+    <Content Include="_LiveArtJS\LA.js" />
+    <Content Include="_LiveArtJS\lib\jquery-1.9.1.min.js" />
+    <Content Include="_LiveArtJS\lib\knockout-2.2.1.js" />
+    <Content Include="_LiveArtJS\lib\LALibs.js" />
+    <Content Include="_LiveArtJS\lib\polyfill\es6-promise.min.js" />
+    <Content Include="_LiveArtJS\LiveArtJS.js" />
+    <Content Include="_LiveArtJS\products\bottle\bottle.svg" />
+    <Content Include="_LiveArtJS\products\bottle\thumb\bottle.jpg" />
+    <Content Include="_LiveArtJS\products\cap\bg.svg" />
+    <Content Include="_LiveArtJS\products\cap\cap.png" />
+    <Content Include="_LiveArtJS\products\cap\thumb\cap.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Aero_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Aero_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Alizarin_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Alizarin_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Aqua_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Aqua_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Cherry_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Cherry_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Forest_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Forest_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Gray_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Gray_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Indigo_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Indigo_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_mask_back.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_mask_front.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Olive_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Olive_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Orange_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Orange_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Pink_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_Pink_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_White_back.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt_White_front.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\t-shirt_back.svg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\t-shirt_front.svg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\apparel_cat.jpg" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-black.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-blue.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-green.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-grey.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-navy.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-red.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-white.png" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\thumbs\t-shirt-yellow.png" />
+    <Content Include="_LiveArtJS\products\fixed\01.jpg" />
+    <Content Include="_LiveArtJS\products\fixed\02.jpg" />
+    <Content Include="_LiveArtJS\products\fixed\03.jpg" />
+    <Content Include="_LiveArtJS\products\flag\Ireland.svg" />
+    <Content Include="_LiveArtJS\products\flag\Ireland_back.svg" />
+    <Content Include="_LiveArtJS\products\flag\st-George-cross.svg" />
+    <Content Include="_LiveArtJS\products\flag\thumbs\Ireland.png" />
+    <Content Include="_LiveArtJS\products\flag\thumbs\st-George-cross.png" />
+    <Content Include="_LiveArtJS\products\flash-drive\flash_drive.svg" />
+    <Content Include="_LiveArtJS\products\flash-drive\thumb\flash_drive.jpg" />
+    <Content Include="_LiveArtJS\products\hoodie\hoodie_back.svg" />
+    <Content Include="_LiveArtJS\products\hoodie\hoodie_front.svg" />
+    <Content Include="_LiveArtJS\products\iPhone\bg.svg" />
+    <Content Include="_LiveArtJS\products\iPhone\iPhone - small.png" />
+    <Content Include="_LiveArtJS\products\iPhone\iPhone.png" />
+    <Content Include="_LiveArtJS\products\iPhone\SGS4CS-small.png" />
+    <Content Include="_LiveArtJS\products\iPhone\SGS4CS.png" />
+    <Content Include="_LiveArtJS\products\iPhone\thumb\phone_cat.jpg" />
+    <Content Include="_LiveArtJS\products\koozie\koozie.svg" />
+    <Content Include="_LiveArtJS\products\koozie\thumb\koozie.jpg" />
+    <Content Include="_LiveArtJS\products\mug\mug.svg" />
+    <Content Include="_LiveArtJS\products\mug\mug_back.svg" />
+    <Content Include="_LiveArtJS\products\mug\thumb\mug.jpg" />
+    <Content Include="_LiveArtJS\products\resizeable\ellipse.svg" />
+    <Content Include="_LiveArtJS\products\resizeable\rect.svg" />
+    <Content Include="_LiveArtJS\products\resizeable\thumbs\ellipse.png" />
+    <Content Include="_LiveArtJS\products\resizeable\thumbs\rect.png" />
+    <Content Include="_LiveArtJS\products\signs\bumper_sticker.svg" />
+    <Content Include="_LiveArtJS\products\signs\car_magnet.svg" />
+    <Content Include="_LiveArtJS\products\signs\standard_sign.svg" />
+    <Content Include="_LiveArtJS\products\signs\thumb\bumper.png" />
+    <Content Include="_LiveArtJS\products\signs\thumb\car_magnet.png" />
+    <Content Include="_LiveArtJS\products\signs\thumb\sign_cat.jpg" />
+    <Content Include="_LiveArtJS\products\signs\thumb\stand_sign.jpg" />
+    <Content Include="_LiveArtJS\products\signs\thumb\truck_magnet.png" />
+    <Content Include="_LiveArtJS\products\signs\truck_magnet.svg" />
+    <Content Include="_LiveArtJS\products\signs\truck_magnet_mask.svg" />
+    <Content Include="_LiveArtJS\products\Socks\Perimeter2.svg" />
+    <Content Include="_LiveArtJS\products\stationary\a4.svg" />
+    <Content Include="_LiveArtJS\products\stationary\business_card.svg" />
+    <Content Include="_LiveArtJS\products\stationary\thumb\a4.jpg" />
+    <Content Include="_LiveArtJS\products\stationary\thumb\b_card.jpg" />
+    <Content Include="_LiveArtJS\products\stationary\thumb\stationary_cat.jpg" />
+    <Content Include="_LiveArtJS\products\tote\thumb\promotional_cat.jpg" />
+    <Content Include="_LiveArtJS\products\tote\thumb\tote.jpg" />
+    <Content Include="_LiveArtJS\products\tote\tote.svg" />
+    <Content Include="_LiveArtJS\products\uniform\renegade_back.svg" />
+    <Content Include="_LiveArtJS\products\uniform\renegade_front.svg" />
+    <Content Include="_LiveArtJS\products\uniform\renegade_sleeve.svg" />
+    <Content Include="_LiveArtJS\products\uniform\respawn_back.svg" />
+    <Content Include="_LiveArtJS\products\uniform\respawn_front.svg" />
+    <Content Include="_LiveArtJS\products\uniform\respawn_sleeve.svg" />
+    <Content Include="_LiveArtJS\products\uniform\thumb\renegade.jpg" />
+    <Content Include="_LiveArtJS\products\uniform\thumb\respawn.jpg" />
+    <Content Include="_LiveArtJS\products\uniform\thumb\uniform_cat.jpg" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="_LiveArtJS\config\config.json" />
+    <Content Include="Views\Cart\ShowDesignDetails.cshtml" />
+    <Content Include="Views\Cart\PackDesign.cshtml" />
+    <Content Include="_LiveArtJS\products\cool-t-shirt\cool-t-shirt.psd" />
+    <Content Include="_LiveArtJS\fonts\WC-Rhesus\WC_Rhesus_A_Bta-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\WC-Rhesus\WC_Rhesus_A_Bta-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-RI.woff" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-RI.ttf" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-R.woff" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-R.ttf" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-BI.woff" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-BI.ttf" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-B.woff" />
+    <Content Include="_LiveArtJS\fonts\Ubuntu\Ubuntu-B.ttf" />
+    <Content Include="_LiveArtJS\fonts\Sweet-Sorrow\sweet_sorrow-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Sweet-Sorrow\sweet_sorrow-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Spin-Cycle\spincycle_ot-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Spin-Cycle\spincycle_ot-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Snickles\Snickles-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Snickles\Snickles-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-700BoldItalic.otf" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-700BoldItalic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-700Bold.otf" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-700Bold-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-400Regular.otf" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-400Regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-400Italic.otf" />
+    <Content Include="_LiveArtJS\fonts\Sinkin-Sans\SinkinSans-400Italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\SF-Collegiate\SF_Collegiate-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\SF-Collegiate\SF_Collegiate-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Seaside-Resort\SEASRN__-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Seaside-Resort\SEASRN__-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Royals\royals-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Royals\royals-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Royals\royals-italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Royals\royals-italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Reckoner\reckoner-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Reckoner\reckoner-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Reckless\reckless-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Reckless\reckless-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Quirko\quirko_regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Quirko\quirko_regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Quirko\Quirko - Readme.pdf" />
+    <Content Include="_LiveArtJS\fonts\Orbitron\orbitron-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Orbitron\orbitron-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Orbitron\Open Font License.markdown" />
+    <Content Include="_LiveArtJS\fonts\Nordic\nordic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Nordic\nordic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Nickainley\nickainley-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Nickainley\nickainley-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\My-Underwood\myunderwood-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\My-Underwood\myunderwood-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Mosk\mosk-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Mosk\mosk-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Melma\melma-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Melma\melma-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Luna\luna-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Luna\luna-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Learning-Curve\LearningCurve_OT-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Learning-Curve\LearningCurve_OT-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-regular-webfont.eot" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-italic-webfont.eot" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-regular-webfont.eot" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\webfonts\leaguegothic-condensed-italic-webfont.eot" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\Open Font License.markdown" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\leaguegothic-regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\League-Gothic\leaguegothic-italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Komika-Title\KomikaTitle-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Komika-Title\KomikaTitle-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Kingthings-Printing\Kingthings_Printingkit-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Kingthings-Printing\Kingthings_Printingkit-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Helltown\helltown-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Helltown\helltown-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Growl\growl_rounded-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Growl\growl_rounded-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-bolditalic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-bolditalic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-bold-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Glamor\glamor-bold-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Giant-Head\giant_head_regular_ot-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Giant-Head\giant_head_regular_ot-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Foxhole\foxhole-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Foxhole\foxhole-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Firecat\FirecatMedium-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Firecat\FirecatMedium-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Existence-Unicase\Existence-UnicaseLight-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Existence-Unicase\Existence-UnicaseLight-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Exan\exan-regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Exan\exan-regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Eraser\EraserRegular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Eraser\EraserRegular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Dusty-Chalk\rough___dusty_chalk-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Dusty-Chalk\rough___dusty_chalk-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Dozen\dozen-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Dozen\dozen-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Dited\Dited-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Dited\Dited-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\District\district-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\District\district-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Dirty-Ego\dirtyego-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Dirty-Ego\dirtyego-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Dinner-Skinny\Diner-Skinny-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Dinner-Skinny\Diner-Skinny-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Deutsch-Gothic\Deutsch-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Deutsch-Gothic\Deutsch-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Desyrel\desyrel-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Desyrel\desyrel-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Deftone\deftone-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Deftone\deftone-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Compass\compass-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Compass\compass-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\College\COLLEGEB-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\College\COLLEGEB-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\College\COLLEGE-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\College\COLLEGE-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Chunk\Open Font License.markdown" />
+    <Content Include="_LiveArtJS\fonts\Chunk\Chunkfive-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Chunk\Chunkfive-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Champagne\cac_champagne-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Champagne\cac_champagne-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Carnevalee-Freakshow\carnevalee_freakshow-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Carnevalee-Freakshow\carnevalee_freakshow-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\Capture_It.font.1js" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\Capture_it-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Capture-It\Capture_it-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Blackout\Open Font License.markdown" />
+    <Content Include="_LiveArtJS\fonts\Blackout\blackout_two_am-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Blackout\blackout_two_am-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Black-Willow\black_willow_rough-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Black-Willow\black_willow_rough-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Bernier\bernier_regular-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Bernier\bernier_regular-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Berliner\berliner-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Berliner\berliner-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\bebasneue.woff" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\bebasneue.ttf" />
+    <Content Include="_LiveArtJS\fonts\Bebas-Neue\BebasNeue.otf" />
+    <Content Include="_LiveArtJS\fonts\Arial\ariali.ttf" />
+    <Content Include="_LiveArtJS\fonts\Arial\ariali-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Arial\arialbi.ttf" />
+    <Content Include="_LiveArtJS\fonts\Arial\arialbi-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Arial\arialbd.ttf" />
+    <Content Include="_LiveArtJS\fonts\Arial\arialbd-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Arial\arial.ttf" />
+    <Content Include="_LiveArtJS\fonts\Arial\arial-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Bold_Italic-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Bold_Italic-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Bold-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man_Bold-webfont.ttf" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man-webfont.woff" />
+    <Content Include="_LiveArtJS\fonts\Action-Man\Action_Man-webfont.ttf" />
+    <Content Include="Views\Designer\Index.cshtml" />
+    <Content Include="Views\Designer\IFrameIndex.cshtml" />
+    <Content Include="_LiveArtJS\assets\fonts\montserrat-light-webfont.woff" />
+    <Content Include="_LiveArtJS\assets\fonts\montserrat-light-webfont.ttf" />
+    <Content Include="_LiveArtJS\assets\fonts\Montserrat-Bold-webfont.woff" />
+    <Content Include="_LiveArtJS\assets\fonts\Montserrat-Bold-webfont.ttf" />
+    <Content Include="_LiveArtJS\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_LiveArtJS\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="_LiveArtJS\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="_LiveArtJS\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="_LiveArtJS\config\textEffects.json" />
+    <Content Include="_LiveArtJS\config\textEffects.deprecated.json" />
+    <Content Include="_LiveArtJS\config\social.json" />
+    <Content Include="_LiveArtJS\config\products.json" />
+    <Content Include="_LiveArtJS\config\pantones.json" />
+    <Content Include="_LiveArtJS\config\graphics.json" />
+    <Content Include="_LiveArtJS\config\fonts.json" />
+    <Content Include="_LiveArtJS\config\colors.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiveArt.Data.Json\LiveArt.Data.Json.csproj">
+      <Project>{2eca72d2-2a90-4364-a457-0299de22c73f}</Project>
+      <Name>LiveArt.Data.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LiveArt.WebAPI.Sample\LiveArt.WebAPI.Sample.csproj">
+      <Project>{b1b03aeb-9574-472e-9bf6-e749a23c78ec}</Project>
+      <Name>LiveArt.WebAPI.Sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PostProcessing\LiveArt.Design.PostProcessing\LiveArt.Design.PostProcessing.csproj">
+      <Project>{bf05212f-773e-448b-835c-ac7eaf704bc1}</Project>
+      <Name>LiveArt.Design.PostProcessing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34589</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34589/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
